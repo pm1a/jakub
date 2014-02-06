@@ -177,12 +177,12 @@ clean: .SYMBOLIC
 	@$(RM) "build\sparsematrix.o" "modules\sparsematrix.mod"
 	@echo Deleting build\zobraz.o and related files
 	@$(RM) "build\zobraz.o" "modules\zobraz.mod"
-	@echo Deleting Project.exe
-	@$(RM) "Project.exe"
+	@echo Deleting Jakub.exe
+	@$(RM) "Jakub.exe"
 
-"Project.exe":  "build\geometry.o" "build\global.o" "build\kreslitko.o" "build\local.o" "build\main.o" "build\mtx_jakub.o" "build\solvers_jakub.o" "build\datasetup.o" "build\fullmatrix.o" "build\mtx.o" "build\mtxiotools.o" "build\mtxtester.o" "build\pmatools.o" "build\pmatypy.o" "build\solvers.o" "build\sparsematrix.o" "build\zobraz.o"
-	@echo Generating Project.exe
-	@$(FC) -o "Project.exe" -m32 "build\geometry.o" "build\global.o" "build\kreslitko.o" "build\local.o" "build\main.o" "build\mtx_jakub.o" "build\solvers_jakub.o" "build\datasetup.o" "build\fullmatrix.o" "build\mtx.o" "build\mtxiotools.o" "build\mtxtester.o" "build\pmatools.o" "build\pmatypy.o" "build\solvers.o" "build\sparsematrix.o" "build\zobraz.o" $(LDIR) $(PRJ_LFLAGS)
+"Jakub.exe":  "build\geometry.o" "build\global.o" "build\kreslitko.o" "build\local.o" "build\main.o" "build\mtx_jakub.o" "build\solvers_jakub.o" "build\datasetup.o" "build\fullmatrix.o" "build\mtx.o" "build\mtxiotools.o" "build\mtxtester.o" "build\pmatools.o" "build\pmatypy.o" "build\solvers.o" "build\sparsematrix.o" "build\zobraz.o"
+	@echo Generating Jakub.exe
+	@$(FC) -o "Jakub.exe" -m32 "build\geometry.o" "build\global.o" "build\kreslitko.o" "build\local.o" "build\main.o" "build\mtx_jakub.o" "build\solvers_jakub.o" "build\datasetup.o" "build\fullmatrix.o" "build\mtx.o" "build\mtxiotools.o" "build\mtxtester.o" "build\pmatools.o" "build\pmatypy.o" "build\solvers.o" "build\sparsematrix.o" "build\zobraz.o" $(LDIR) $(PRJ_LFLAGS)
 
-all: "Project.exe" .SYMBOLIC
+all: "Jakub.exe" .SYMBOLIC
 
