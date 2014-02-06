@@ -46,7 +46,7 @@ program jakub
 
 
 
-    print *,"cau"
+    print *,"cau v"
     call ReadAgros(jmeno1,U)   !precte data z Agrosu
     print *, "pocet bodu", U%np
     print *, "pocet trojuhelniku", U%nt
