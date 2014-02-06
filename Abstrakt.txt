@@ -1,0 +1,13 @@
+
+1.
+
+2. lokalni zmeny v profilu znamenaji lokalnizmeny v materialovych konstantach
+   => matice "tuhosti" se zmeni jen na nekolika malo mistech
+ - matici tedy neni nutno v kazdem kroku vytvaret celou znovu od zacatku, ale staci aplikovat zmeny jen v dotcenych lokalnich maticich tuhosti.
+ - Z tohoto hlediska lze podstatnou cast ulohy "predeliminovat". Uloha se principialne rozpada na dve  podulohy. Jedna je nemenna (vzduch v okoli, vlastni material knstrukce), druha je oblast kde je potencial pro zmenu materialovych parametru. Nemennou oblast lze odeliminovat a v dalsich krocih se venovat zmenam na menitelne oblasti.
+ 3. Porovname nasledujici varianty reseni "mirne" modifikovanych problemu
+   a) po reasamblaci upravene casti matice ji znovu rozlozit, nove rozklady jsou efektivnejsi, protoze struktura matice se nemeni a neni tedy traba provadet zadne realokace pameti
+   b) provest pro vychozi rozlozeni uplny LU rozklad matice a po modifikaci  uzit pro reseni nove soustavy Shermann-Morrisonovy-Woodbury formule pro opravy inverzni matice matici nizke hodnosti.
+   c) ziskane reseni z predchoziho kroku upravit pouze nekolika iteracemi vhodne metody. Zde se predpoklada, ze reseni je spojite zavisle na parametrech ulohy. 
+
+ 

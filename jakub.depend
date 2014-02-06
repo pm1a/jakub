@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1380303613 source:/home/pmayer/Ubuntu One/fortran/spec/pmatools.f90
+
+1380297790 source:/home/pmayer/Ubuntu One/fortran/spec/typy.f90
+
+1386433286 source:/home/pmayer/Ubuntu One/fortran/jakub/mtx_jakub.f90
+
+1386428563 source:/home/pmayer/Ubuntu One/vlacky/srcfortran/zobraz.f90
+
+1386607031 source:/home/pmayer/Ubuntu One/fortran/spec/mtx.f90
+
+1386581411 source:/home/pmayer/Ubuntu One/fortran/jakub/geometry.f90
+
+1386432709 source:/home/pmayer/Ubuntu One/fortran/spec/datasetup.f90
+
+1386432731 source:/home/pmayer/Ubuntu One/fortran/spec/fullmatrix.f90
+
+1386432801 source:/home/pmayer/Ubuntu One/fortran/spec/mtxiotools.f90
+
+1386432830 source:/home/pmayer/Ubuntu One/fortran/spec/solvers.f90
+
+1386433001 source:/home/pmayer/Ubuntu One/fortran/spec/sparsematrix.f90
+
+1386581461 source:/home/pmayer/Ubuntu One/fortran/jakub/kreslitko.f90
+
+1386581411 source:/home/pmayer/Ubuntu One/fortran/jakub/local.f90
+
+1386433044 source:/home/pmayer/Ubuntu One/fortran/spec/mtxtester.f90
+
+1386433477 source:/home/pmayer/Ubuntu One/fortran/jakub/main.f90
+
+1386578531 source:/home/pmayer/Ubuntu One/fortran/jakub/solvers_jakub.f90
+
+1385720520 source:/home/pmayer/Ubuntu One/fortran/spec/pmamain.f90
+
+1386581329 source:/home/pmayer/Ubuntu One/fortran/jakub/global.f90
+
+1386427985 source:/home/pmayer/Ubuntu One/fortran/spec/mtxtypy.f90
+
+1386429023 source:/home/pmayer/Ubuntu One/fortran/spec/pmatypy.f90
+
+1386512752 source:/home/pmayer/Ubuntu One/fortran/spec/zobraz.f90
+

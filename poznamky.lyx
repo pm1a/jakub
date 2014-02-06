@@ -1,0 +1,386 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+theorems-named
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Poznamky k vypoctum
+\end_layout
+
+\begin_layout Section
+Co řešíme a proč to jde
+\end_layout
+
+\begin_layout Standard
+Řešíme
+\begin_inset Formula 
+\[
+-\nabla(\varepsilon\nabla y)=g\qquad na\: oblasti\:\Omega
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{/\Omega}=h.
+\]
+
+\end_inset
+
+V našem případě je důležité, že všechny objekty jsou komplexní.
+ Tak to přeznačíme:
+\begin_inset Formula 
+\begin{eqnarray*}
+\varepsilon & = & \alpha+i\cdot\beta\\
+y & = & u+i\cdot v\\
+g & = & g_{1}+i\cdot g_{2}\\
+h & = & h_{1}+i\cdot h_{2}
+\end{eqnarray*}
+
+\end_inset
+
+a rozepíšeme
+\begin_inset Formula 
+\[
+-\nabla((\alpha+i\cdot\beta)\nabla(u+i\cdot v))=g_{1}+i\cdot g_{2}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+-\nabla(\alpha\nabla u)+\nabla(\beta\nabla v)-i()=g_{1}+i\cdot g_{2}
+\]
+
+\end_inset
+
+porovnáme reálnou a imaginární část a dostaneme
+\begin_inset Formula 
+\begin{eqnarray*}
+\nabla(\beta\nabla v)-\nabla(\alpha\nabla u) & = & g_{1}\\
+\nabla(\alpha\nabla v)+\nabla(\beta\nabla u) & = & g_{2}
+\end{eqnarray*}
+
+\end_inset
+
+a podle zadání je 
+\begin_inset Formula $\beta$
+\end_inset
+
+ pořád kladné.
+ Pro 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ je zaručena jen nezápornost.
+ Okrajové podmínky rozdělíme stejně.
+ Tenhle systém má na diagonále invertovatelné operátory, ale po diskretizaci
+ je nesymetrický.
+ Pokud označím 
+\begin_inset Formula $K=\nabla(\beta\nabla)$
+\end_inset
+
+ a 
+\begin_inset Formula $L=\nabla(\alpha\nabla)$
+\end_inset
+
+ tak to můžu přepsat
+\begin_inset Formula 
+\begin{eqnarray*}
+Kv-Lu & = & g_{1}\\
+Lv+Ku & = & g_{2},
+\end{eqnarray*}
+
+\end_inset
+
+kde 
+\begin_inset Formula $K$
+\end_inset
+
+ je samoadjungovaný, positivně 
+\emph on
+definitní 
+\emph default
+a
+\emph on
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\emph default
+samoadjungovaný, positivně 
+\emph on
+semidefinitní 
+\emph default
+operátor.
+ Tohle je řešitelné.
+ Napřed pro 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Z první rovnice je 
+\begin_inset Formula $v=K^{-1}(Lu+g_{1})$
+\end_inset
+
+ a po dosazení do druhé
+\begin_inset Formula 
+\[
+LK^{-1}(Lu+g_{1})+Ku=g_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(K+LK^{-1}L)u=g_{2}-LK^{-1}g_{1}\:.
+\]
+
+\end_inset
+
+A protože 
+\begin_inset Formula $K+LK^{-1}L$
+\end_inset
+
+ je součtem positivně definitního a positivně semididefinitního operátoru,
+ jde o positivně definitní operátor.
+ Stejně se to udělá pro 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Tedy při našem zadání, kdy je 
+\begin_inset Formula $\beta$
+\end_inset
+
+ pořád kladné, je naše úloha řešitelná.
+ Pokud by bylo pořád kladné 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, úvaha by proběhla obdobně se stejným závěrem.
+ Pokud by obě složky byly pouze nezáporné, tak by byla třeba podrobnější
+ analýza.
+ 
+\end_layout
+
+\begin_layout Standard
+Věc se redukuje na dvě nezávislé soustavy jen pokud je 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ nebo 
+\begin_inset Formula $\beta$
+\end_inset
+
+ pořád nula.
+ Jinak to podle mě nejde.
+\end_layout
+
+\begin_layout Section
+Jak to spočítat
+\end_layout
+
+\begin_layout Standard
+!! pozor tohle je trochu zhruba !!!
+\end_layout
+
+\begin_layout Standard
+Funkce 
+\begin_inset Formula $u$
+\end_inset
+
+ a 
+\begin_inset Formula $v$
+\end_inset
+
+ hledáme v nějakém prostoru (Hilbertově) 
+\begin_inset Formula $V$
+\end_inset
+
+ pomocí metody konečných prvků.
+ Nechť 
+\begin_inset Formula $V_{n}\subset\subset V$
+\end_inset
+
+ a jeho dimenze ať je 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Zvolíme bázi 
+\begin_inset Formula $\varphi_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $V_{n}=Span(\varphi_{1},\ldots,\varphi_{n})$
+\end_inset
+
+.
+ Použijeme Galerkinovu metodu a dostaneme
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{KV-LU} & = & G_{1}\\
+\mathfrak{\mathbf{LV+KU}} & = & G_{2}
+\end{eqnarray*}
+
+\end_inset
+
+kde 
+\begin_inset Formula $\mathbf{U,V}\in\mathbb{R}^{n}$
+\end_inset
+
+ jsou souřadnice hledaných vektorů, t.j.
+\begin_inset Formula 
+\begin{eqnarray*}
+u & \text{=} & {\displaystyle \sum_{i=1}^{n}\mathbf{U}_{i}\varphi_{i}}\\
+v & = & \sum_{i=1}^{n}\mathbf{V}_{i}\varphi_{i},
+\end{eqnarray*}
+
+\end_inset
+
+pak pro matice 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ a 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+ platí
+\begin_inset Formula 
+\[
+\mathbf{K}_{ij}=\int_{\Omega}\beta\nabla\varphi_{i}\nabla\varphi_{j}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{L}_{ij}=\int_{\Omega}\alpha\nabla\varphi_{i}\nabla\varphi_{j}
+\]
+
+\end_inset
+
+a pro 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+a 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+G_{1_{i}}=\int_{\Omega}g_{1}\varphi_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+G_{2_{i}}=\int_{\Omega}g_{2}\varphi_{i}\:.
+\]
+
+\end_inset
+
+Teď jde postupovat obdobně jako ve spojitém případě.
+ Tedy
+\begin_inset Formula 
+\[
+\mathbf{U=(K+LK^{-1}L)^{-1}(\mathrm{G_{2}}-LK^{-1}\mathrm{G_{1}})}\:.
+\]
+
+\end_inset
+
+Alternativou je uvědomit si, že když vynásobíme první rovnici 
+\begin_inset Formula $-1$
+\end_inset
+
+, tak dostaneme soustavu se symetrickou indefinitní maticí.
+ Její druhá mocnina je již positivně definitní a lze na ni použít gradientní
+ metody.
+ Ať už nejvetší spád (současnost), nebo lépe sdružené gradienty (dokončuji).
+\end_layout
+
+\begin_layout Section
+Lokální úlohy
+\end_layout
+
+\begin_layout Standard
+to zas příště :) .
+ 
+\end_layout
+
+\end_body
+\end_document
